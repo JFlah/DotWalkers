@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DotWalkers</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        div.row
+        {
+            clear:left;
+            margin:6px;
+        }
+        label
+        {
+            float:left;
+            width:200px;
+        }
+        textarea
+        {
+            width:200px;
+            height:100px;
+        }
+        div.buttons
+        {
+            margin-left:150px;
+            margin-top:16px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("DotWalkers", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+ 
+            <address>
+                <strong>Support and Scheduling:</strong>   <a href="mailto:WeDotWalk@gmail.com">WeDotWalk@gmail.com</a>
+            </address>
+            <address>
+                <abbr title="Phone">P:</abbr>
+                (617) 894-7844 (Jack)<br />
+                <abbr title="Phone">P:</abbr>
+                (617) 901-9613 (Conor)
+            </address>       
+            
+            <br /><p>&copy; @DateTime.Now.Year - DotWalkers</p>    
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

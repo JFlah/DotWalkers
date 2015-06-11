@@ -11,7 +11,7 @@
     <h1>DotWalkers</h1>
     <p class="lead">A Dorchester-based, citywide dog walking service that works around your schedule!</p>
     <p class="lead">Register now to get started quickly and easily.</p>
-    <p><a href="http://localhost:51145/Home/About" class="btn btn-primary btn-lg">Who are we? &raquo;</a></p>
+    <p>@Html.ActionLink("Who are we?", "About", "Home", new { @class = "btn btn-primary btn-lg" })</p>
 </div>
 
 <div class="row">
@@ -20,7 +20,7 @@
         <p>
             Go here to view pictures and short bios about all of our Walkers (whether Dot or not)!
         </p>
-        <p><a class="btn btn-default" href="http://localhost:51145/Home/Bios">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Learn More", "Bios", "Home", new { @class = "btn btn-default" })</p>
     </div>
 
     <div class="col-md-4"></div>
@@ -30,6 +30,6 @@
         <p>You can easily fill out a quick contact form to get in touch with us and sign up!
             Tell us all about who you are, who your canine friend is, and what kind of schedule you need us
             to work around.</p>
-        <p><a class="btn btn-default" href="http://localhost:51145/Home/Contact">Sign up &raquo;</a></p>
+        <p>@Html.ActionLink("Sign Up", "Contact", "Home", new { @class = "btn btn-default" })</p>
     </div>
 </div>

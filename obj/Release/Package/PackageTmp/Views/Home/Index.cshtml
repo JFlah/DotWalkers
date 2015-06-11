@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>DotWalkers</h1>
+    <p class="lead">A Dorchester-based, citywide dog walking service that works around your schedule!</p>
+    <p class="lead">Register now to get started quickly and easily.</p>
+    <p>@Html.ActionLink("Who are we?", "About", "Home", new { @class = "btn btn-primary btn-lg" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Meet the Walkers</h2>
+        <p>
+            Go here to view pictures and short bios about all of our Walkers (whether Dot or not)!
+        </p>
+        <p>@Html.ActionLink("Learn More", "Bios", "Home", new { @class = "btn btn-default" })</p>
+    </div>
+
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <h2>Schedule Walks with Us</h2>
+        <p>You can easily fill out a quick contact form to get in touch with us and sign up!
+            Tell us all about who you are, who your canine friend is, and what kind of schedule you need us
+            to work around.</p>
+        <p>@Html.ActionLink("Sign Up", "Contact", "Home", new { @class = "btn btn-default" })</p>
+    </div>
+</div>
