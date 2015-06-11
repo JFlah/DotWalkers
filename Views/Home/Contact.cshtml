@@ -3,39 +3,43 @@
     ViewBag.Title = "Contact Us";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br /><br /><br />
 <h1>Contact Us</h1>
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary(true)
-    <div class="row">
-        @Html.LabelFor(model=>model.FirstName, "First Name:")
-        @Html.EditorFor(model => model.FirstName)
-        @Html.ValidationMessageFor(mode => Model.FirstName)
-    </div>
 
-    @Html.ValidationSummary(true)
-    <div class="row">
-        @Html.LabelFor(model => model.FirstName, "Last Name:")
-        @Html.EditorFor(model => model.LastName)
-        @Html.ValidationMessageFor(mode => Model.LastName)
-    </div>
-    
-    @Html.ValidationSummary(true)
-    <div class="row">
-        @Html.LabelFor(model => model.FirstName, "Email:    ")
-        @Html.EditorFor(model => model.Email)
-        @Html.ValidationMessageFor(mode => Model.Email)
-    </div>
-    
-    @Html.ValidationSummary(true)
-    <div class="row">
-        @Html.LabelFor(model => model.FirstName, "Comments:")
-        @Html.TextAreaFor(model => model.Comment)
-        @Html.ValidationMessageFor(mode => Model.Comment)
-    </div>
-    
-    <div class="row">
-        <input type="submit" value="submit" />
-        <input type="reset" value="reset" />
-    </div>
-}
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.FirstName, "First Name:")
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(mode => Model.FirstName)
+        </div>
+
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.FirstName, "Last Name:")
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(mode => Model.LastName)
+        </div>
+
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.FirstName, "Email:    ")
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(mode => Model.Email)
+        </div>
+
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.FirstName, "Comments:")
+            @Html.TextAreaFor(model => model.Comment)
+            @Html.ValidationMessageFor(mode => Model.Comment)
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </div>
+    }
+
