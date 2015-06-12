@@ -30,7 +30,7 @@ namespace DotWalkers.Controllers
             return View();
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public ActionResult Contact(ContactModels c)
         {
             if (ModelState.IsValid)
@@ -64,7 +64,7 @@ namespace DotWalkers.Controllers
                 }
             }
             return View();
-        }
+        }*/
 
         public ActionResult Bios()
         {
